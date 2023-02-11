@@ -60,7 +60,7 @@ async def get_profile():
     if len(profile) < 1:
         return
     if profile:
-        return profile
+        return profile[0]
     else:
         raise HTTPException(status_code=404, detail="Profile not found")
     
